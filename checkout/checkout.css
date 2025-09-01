@@ -1,0 +1,389 @@
+.checkout-section {
+  padding: 2rem;
+  background-color: #fff7f0;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 40px auto;
+  margin-top: 120px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 4rem);
+}
+
+.checkout-section h1 {
+  color: #5c4033;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 25px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #5c4033;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d2691e;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.delivery-pickup {
+  margin-bottom: 15px;
+}
+
+.delivery-pickup p {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #5c4033;
+}
+
+.delivery-pickup label {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#address-field {
+  display: none;
+  margin-bottom: 15px;
+}
+
+.checkout-buttons {
+  margin-top: 2rem;
+}
+
+#submit-order-btn, #preview-confirm-order-btn {
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-order-btn:hover, #preview-confirm-order-btn:hover {
+  background-color: #b35917;
+}
+
+#back-to-form-btn {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#back-to-form-btn:hover {
+  background-color: #555;
+}
+
+#order-summary {
+  margin-top: 30px;
+  padding: 25px;
+  background: #ffe8d9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#order-summary h2 {
+  color: #5c4033;
+  margin-bottom: 15px;
+}
+
+#order-summary p {
+  margin-bottom: 10px;
+}
+
+/* Payment Fields Container */
+.payment-fields-container {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+/* Credit Card Specific Styles */
+.credit-card-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.credit-card-fields label {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.card-row {
+  grid-column: span 2;
+}
+
+/* PayPal Styles */
+.paypal-notice {
+  padding: 1rem;
+  background-color: #f0f7ff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Order Items in Summary */
+.order-items {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.order-items h3 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.order-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-items li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-items li:last-child {
+  border-bottom: none;
+}
+
+/* Add these new styles */
+#checkout-form {
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+#order-preview, #order-summary {
+  display: none;
+}
+
+/* Order Preview Styles */
+#order-preview {
+  background: #fff9f5;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+#order-items-list,
+#payment-details-preview {
+  margin: 1.5rem 0;
+}
+
+.order-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+/* Buttons */
+#submit-order-btn, #preview-confirm-order-btn, #back-to-form-btn {
+  width: 100%;
+  padding: 12px;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#submit-order-btn, #preview-confirm-order-btn {
+  background-color: #d2691e;
+  color: white;
+}
+
+#back-to-form-btn {
+  background-color: #666;
+  color: white;
+}
+
+#submit-order-btn:hover, #preview-confirm-order-btn:hover {
+  background-color: #b35917;
+}
+
+#back-to-form-btn:hover {
+  background-color: #555;
+}
+
+/* Order Summary Styles */
+#order-summary {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#order-summary h2 {
+  color: #5c4033;
+  margin-bottom: 1.5rem;
+}
+
+#order-summary p {
+  margin: 0.75rem 0;
+  color: #5c4033;
+}
+
+#confirmed-order-items {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.payment-options {
+  margin-top: 1.5rem;
+}
+
+.payment-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.payment-tab {
+  flex: 1;
+  padding: 12px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.payment-tab.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.payment-content {
+  display: none;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.payment-content.active {
+  display: block;
+}
+
+.card-logos {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.card-logos img {
+  height: 24px;
+  width: auto;
+}
+
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.terms-checkbox {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fee-notice {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+#order-preview button {
+  display: block;
+  margin: 1rem auto;
+  padding: 12px 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#order-preview #confirm-order-btn {
+  background-color: var(--primary-color);
+  color: white;
+  width: fit-content;
+}
+
+#order-preview #back-to-form-btn {
+  background-color: #eee;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .checkout-section {
+    margin-top: 100px; /* Adjust for smaller mobile navbar */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+    width: calc(100% - 2rem);
+  }
+  
+  .payment-tabs {
+    flex-direction: column;
+  }
+  
+  .card-details {
+    grid-template-columns: 1fr;
+  }
+}

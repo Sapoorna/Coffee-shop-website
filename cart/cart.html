@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - Brew Bliss</title>
+  <link rel="stylesheet" href="../global.css" />
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <img src="../images/logo.png" alt="Bean & Bliss Logo" class="logo" />
+    <nav>
+      <ul class="nav-links">
+        <li><a href="../home/home.html">Home</a></li>
+        <li><a href="../menu/menu.html">Menu</a></li>
+        <li><a href="../home/home.html#best-sellers">Best Sellers</a></li>
+        <li><a href="../home/home.html#about">About Us</a></li>
+        <li class="cart-link-container">
+          <a href="../cart/cart.html" class="cart-link">
+            🛒 (<span class="cart-count">0</span>)
+          </a>
+          <div class="cart-preview">
+            <div class="cart-preview-items">
+              <!-- Items will be added by JavaScript -->
+            </div>
+            <div class="cart-preview-total">
+              Total: $<span class="preview-total-amount">0.00</span>
+            </div>
+            <a href="../cart/cart.html" class="view-cart-btn">View Full Cart →</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cart-section">
+    <h1>Your Cart</h1>
+    <div id="cart-items" class="cart-items-container"></div>
+    <div class="cart-total" id="cart-total">Total: $0.00</div>
+
+    <div class="cart-buttons">
+      <button id="clear-cart-btn">Clear All</button>
+      <button id="checkout-btn">Checkout</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="site-footer">
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+
+        <!-- Logo and Description -->
+        <div class="footer-section">
+          <h2 class="footer-logo">☕ Bean & Bliss</h2>
+          <p>Artisan coffee crafted with passion<br> and served with care.</p>
+        </div>
+
+        <!-- Explore Links -->
+        <div class="footer-section">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <p class="footer-bottom">© 2023 Bean & Bliss Coffee. All rights reserved.</p>
+
+      <!-- Back to Top Button -->
+      <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+
+    <script src="../global.js"></script>
+    <script src="cart.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        loadCartItems();
+
+        // Add event listeners
+        document.getElementById('clear-cart-btn').addEventListener('click', clearCart);
+        document.getElementById('checkout-btn').addEventListener('click', goToCheckout);
+      });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bean & Bliss - Coffee & Dessert Shop</title>
+  <link rel="stylesheet" href="../global.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body onload="showWelcomeMessage()">
+  <!-- Navbar -->
+  <div id="site-navbar">
+    <header class="navbar">
+      <img src="../images/logo.png" alt="Bean & Bliss Logo" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../home/home.html">Home</a></li>
+          <li><a href="../menu/menu.html">Menu</a></li>
+          <li><a href="../home/home.html#best-sellers">Best Sellers</a></li>
+          <li><a href="../home/home.html#about">About Us</a></li>
+          <li class="cart-link-container">
+            <a href="../cart/cart.html" class="cart-link">
+              🛒 (<span class="cart-count">0</span>)
+            </a>
+            <div class="cart-preview">
+              <div class="cart-preview-items"></div>
+              <div class="cart-preview-total">
+                Total: $<span class="preview-total-amount">0.00</span>
+              </div>
+              <a href="../cart/cart.html" class="view-cart-btn">View Full Cart →</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-card">
+      <h1>Welcome to Bean & <span>Bliss</span></h1>
+      <p>Your daily dose of coffee and dessert happiness!</p>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section id="best-sellers" class="best-sellers-section">
+    <h2 class="section-title">Best Selling Items</h2>
+    <div class="specialties">
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1570517130750-10c67ffdde09?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Caramel Macchiato" />
+        <p><strong>Caramel Macchiato</strong></p>
+        <p>$4.75</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://images.unsplash.com/photo-1700448293876-07dca826c161?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Chocolate Fudge Cake" />
+        <p><strong>Chocolate Fudge Cake</strong></p>
+        <p>$5.50</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1664392087859-815b337c3324?q=80&w=780&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Iced Tea" />
+        <p><strong>Iced Tea</strong></p>
+        <p>$4.00</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1664472613567-2176b50ddb28?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Fruit Tart" />
+        <p><strong>Fruit Tart</strong></p>
+        <p>$2.50</p>
+      </div>
+    </div>
+    <div class="view-more">
+      <a href="../menu/menu.html" class="view-menu-btn">View Menu ➜</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <!-- Left side: Image -->
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1542372147193-a7aca54189cd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Our Cafe" />
+      </div>
+
+      <!-- Right side: Content -->
+      <div class="about-content">
+        <h2>Our Story</h2>
+        <p>
+          Welcome to <strong>Bean & Bliss</strong>! Since our humble
+          beginnings, we've been passionate about creating a cozy space where
+          people can enjoy freshly brewed coffee and handmade desserts with
+          love.
+        </p>
+        <p>
+          Every cup of coffee is brewed from carefully selected beans, and
+          each dessert is crafted with locally-sourced ingredients — made to
+          bring you warmth, comfort, and joy.
+        </p>
+
+        <!-- Badges -->
+        <div class="about-badges">
+          <span class="badge"><i class="fas fa-leaf"></i> Organic Ingredients</span>
+          <span class="badge"><i class="fas fa-heart"></i> Handcrafted</span>
+          <span class="badge"><i class="fas fa-seedling"></i> Sustainable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <h2>What Our Customers Say</h2>
+    <p class="subtitle">Hear from our happy visitors</p>
+
+    <div class="testimonials-container">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">
+          "The best hazelnut latte I’ve ever had! The atmosphere is so cozy
+          and the staff is incredibly friendly."
+        </p>
+        <div class="customer">
+          <img src="https://plus.unsplash.com/premium_photo-1738776254709-a8872157f87d?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sarah" />
+          <div>
+            <strong>Sarah J.</strong>
+            <span>Regular Customer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">
+          "Their tiramisu is to die for! I come here every weekend just for
+          that and their amazing cappuccino."
+        </p>
+        <div class="customer">
+          <img src="https://plus.unsplash.com/premium_photo-1739786995646-480d5cfd83dc?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Michael" />
+          <div>
+            <strong>Michael T.</strong>
+            <span>Food Blogger</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">
+          "This is my go-to spot for working remotely. Great WiFi, amazing
+          coffee, and the most comfortable chairs!"
+        </p>
+        <div class="customer">
+          <img src="https://plus.unsplash.com/premium_photo-1739786995552-0a2ccfa62ba5?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Emily" />
+          <div>
+            <strong>Emily R.</strong>
+            <span>Digital Nomad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Visit Us Section -->
+  <section id="visit" class="visit-section">
+    <div class="visit-container">
+      <!-- Left Side: Info -->
+      <div class="visit-info">
+        <h2>Visit Us</h2>
+
+        <p>
+          <span class="icon">📍</span> <strong>Location</strong><br />
+          123 Cozy Lane, Downtown District
+        </p>
+
+        <p>
+          <span class="icon">⏰</span> <strong>Hours</strong><br />
+          Monday - Friday: 7am - 8pm<br />
+          Saturday - Sunday: 8am - 9pm
+        </p>
+
+        <p>
+          <span class="icon">📞</span> <strong>Contact</strong><br />
+          +94 77 123 4567<br />
+          bean&bliss@gmail.com
+        </p>
+
+        <!-- Special Offer Box -->
+        <div class="offer-box">
+          <h3>Special Offer</h3>
+          <p>Sign up for our newsletter and get 15% off your first order!</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Side: Map -->
+      <div class="visit-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.922604049274!2d-73.98715538459242!3d40.74881707932702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU2LjAiTiA3M8KwNTknMjMuNiJX!5e0!3m2!1sen!2sus!4v1634123412345!5m2!1sen!2sus"
+          width="100%" height="350" style="border: 0" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <div id="site-footer">
+    <!-- Footer Section -->
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-container">
+
+        <!-- Logo and Description -->
+        <div class="footer-section">
+          <h2 class="footer-logo">☕ Bean & Bliss</h2>
+          <p>Artisan coffee crafted with passion<br> and served with care.</p>
+        </div>
+
+        <!-- Explore Links -->
+        <div class="footer-section">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <p class="footer-bottom">© 2023 Bean & Bliss Coffee. All rights reserved.</p>
+
+      <!-- Back to Top Button -->
+      <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../global.js"></script>
+  <script src="home.js"></script>
+</body>
+
+</html>

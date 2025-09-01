@@ -1,0 +1,480 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1755884932029-c26586a7b06a?q=80&w=702&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover; /* Update path if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: white;
+  position: relative;
+}
+
+.hero-card {
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent dark */
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px); /* For frosted effect */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.hero h1 span {
+  color: var(--accent-color);
+}
+
+.view-menu-btn {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: black;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.view-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-menu-btn:hover {
+  background-color: #e6b800;
+}
+
+/* Legacy Home Section (if used) */
+.main {
+  background: url("https://images.unsplash.com/photo-1755884932029-c26586a7b06a?q=80&w=702&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.main-text h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.main-text p {
+  font-size: 1.5rem;
+  max-width: 600px;
+}
+
+/* Sections */
+.specialties-section,
+.gallery-section,
+.about-section {
+  padding: 4rem 2rem;
+}
+
+/* Grid Layouts */
+.specialties,
+.gallery,
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.specialty-item,
+.gallery-item,
+.about-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Best Sellers */
+.best-sellers-section {
+  padding: 4rem 2rem;
+  background-color: #fff9f5;
+}
+
+/* About Section */
+.about-section {
+  padding: 60px 10%;
+  background-color: #fdfdfd;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* For larger screens - image on left, content on right */
+@media (min-width: 769px) {
+  .about-container {
+    flex-direction: row;
+  }
+  
+  .about-image {
+    order: 1;
+    flex: 1;
+  }
+  
+  .about-content {
+    order: 2;
+    flex: 1;
+    text-align: left;
+  }
+}
+
+/* For mobile - stack with image first */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-image {
+    order: 1;
+  }
+  
+  .about-content {
+    order: 2;
+    text-align: center;
+  }
+}
+
+/* Ensure image is properly sized */
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  color: #6b2c1d;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Badges */
+.about-badges {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.badge {
+  background: #f9f5ec;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #5a3a2d;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.badge i {
+  color: #d2691e;
+}
+
+/* Hover effect on badges */
+.badge:hover {
+  transform: scale(1.05);
+  background: #fff3e0;
+}
+
+/* Mobile adjustments for badges */
+@media (max-width: 768px) {
+  .about-content h2,
+  .about-content p {
+    text-align: center;
+  }
+  
+  .about-badges {
+    justify-content: center;
+  }
+}
+
+/* Product Cards */
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #523522;
+}
+
+.welcome-notification {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  z-index: 1000;
+  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* ===== Mobile Responsive Styles ===== */
+@media (max-width: 768px) {
+  /* Hero section */
+  .hero {
+    height: 80vh;
+    padding: 2rem 1rem;
+  }
+
+  .hero-card {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  /* Best sellers grid */
+  .specialties {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 60px 10%;
+  background-color: #6b2c1d; /* coffee brown */
+  color: #fff;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.testimonials-section .subtitle {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #f5d49b; /* soft accent */
+}
+
+.testimonials-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.customer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.customer strong {
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.customer span {
+  font-size: 0.85rem;
+  color: #f5d49b;
+}
+
+/* Visit Us Section */
+.visit-section {
+  padding: 60px 10%;
+  background: #fff;
+  color: #333;
+}
+
+.visit-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.visit-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6b2c1d; /* coffee brown */
+}
+
+.visit-info p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-right: 6px;
+  color: #d2691e;
+}
+
+.offer-box {
+  background: #fff7e6;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.offer-box h3 {
+  color: #6b2c1d;
+  margin-bottom: 10px;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+.newsletter-form button {
+  background: #6b2c1d;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #a34124;
+}
+
+.visit-map iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .view-menu-btn {
+    padding: 0.5rem 1rem;
+  }
+}

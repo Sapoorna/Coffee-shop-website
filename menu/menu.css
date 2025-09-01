@@ -1,0 +1,239 @@
+.menu-page {
+  padding: 2rem;
+  display: flex;
+}
+
+.menu-sidebar {
+  float: left;
+  width: 20%;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  height: 100%;
+  position: sticky;
+  top: 80px;
+  box-sizing: border-box;
+}
+
+.menu-content {
+  width: 80%;
+  padding-left: 2rem;
+}
+
+.menu-section {
+  margin-bottom: 3rem;
+}
+
+.menu-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+.menu-grid {
+  display: grid;
+  gap: 1.5rem;
+  /* Default: 1 column (mobile) */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* Tablet (2 columns) */
+@media (min-width: 600px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (4 columns) */
+@media (min-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.menu-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card img {
+  border-radius: 8px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.menu-card h3 {
+  margin: 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.menu-card p {
+  margin: 0.5rem 0;
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+}
+.menu-content {
+  width: 100%;
+  max-width: 1400px; /* Adjust as needed */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 1rem; /* Add padding on small screens */
+}
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.quantity-control button {
+  padding: 0.4rem 1rem;
+  margin: 0 0.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-control button:hover {
+  background-color: var(--primary-dark);
+}
+
+.quantity-control span {
+  min-width: 20px;
+  text-align: center;
+}
+
+.menu-card > button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.menu-card > button:hover {
+  background-color: var(--primary-dark);
+}
+/* Cart Notification Styles */
+.cart-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: slide-in 0.5s forwards;
+}
+
+.cart-notification.fade-out {
+  animation: fade-out 0.5s forwards;
+}
+
+@keyframes slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+/* Add to existing menu.css */
+.cart-preview {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  padding: 1rem;
+  z-index: 1000;
+  display: none;
+  border: 1px solid #eee;
+}
+
+.cart-link-container:hover .cart-preview {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.cart-preview-items {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.cart-preview-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-preview-item:last-child {
+  border-bottom: none;
+}
+
+.cart-preview-total {
+  font-weight: bold;
+  text-align: right;
+  margin: 1rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.view-cart-btn {
+  display: block;
+  text-align: center;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.view-cart-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Dark theme support */
+.dark-theme .cart-preview {
+  background: #2d2d2d;
+  border-color: #444;
+}
+
+.dark-theme .cart-preview-item {
+  border-color: #444;
+}
+
+.dark-theme .cart-preview-total {
+  border-color: #555;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+

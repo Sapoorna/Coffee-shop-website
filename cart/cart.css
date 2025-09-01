@@ -1,0 +1,124 @@
+.cart-section {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 2rem auto;
+  margin-top: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cart-items-container {
+  margin: 1.5rem 0;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-info p {
+  margin: 0.2rem 0;
+}
+
+.quantity-adjust {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-adjust button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.item-total {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.remove-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-total {
+  text-align: right;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  border-top: 2px solid #eee;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.cart-buttons button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cart-buttons button:hover {
+  background-color: var(--primary-dark);
+}
+
+#clear-cart-btn {
+  background-color: #ff4444;
+}
+
+#clear-cart-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-section {
+    margin-top: 100px; /* Adjust for smaller mobile navbar */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .cart-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .cart-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
