@@ -1,6 +1,7 @@
 .menu-page {
   padding: 2rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .menu-sidebar {
@@ -89,7 +90,8 @@
   width: 100%;
   max-width: 1400px; /* Adjust as needed */
   margin: 0 auto; /* Center the grid */
-  padding: 0 1rem; /* Add padding on small screens */
+  padding: 0 1rem;
+  padding-top: 100px; /* Add padding on small screens */
 }
 .quantity-control {
   display: flex;
