@@ -24,10 +24,13 @@ function decreaseQty(itemName) {
 }
 
 function addQtyToCart(itemName, price) {
-  const qty = parseInt(document.getElementById(`${itemName}-qty`).innerText);
-  
+  let qty = parseInt(document.getElementById(`${itemName}-qty`).innerText);
+
+  // Fix: default quantity to 1 if qty is 0 or invalid
+  if (!qty || qty <= 0) qty = 1;
+
   const existingItemIndex = cart.findIndex(item => item.name === itemName);
-  
+
   if (existingItemIndex !== -1) {
     cart[existingItemIndex].quantity += qty;
   } else {
@@ -37,7 +40,7 @@ function addQtyToCart(itemName, price) {
       quantity: qty
     });
   }
-  
+
   updateCartStorage();
   showCartNotification(`${qty} × ${itemName} added to cart!`);
   resetQuantity(itemName);
@@ -52,7 +55,7 @@ function showCartNotification(message) {
   notification.className = 'cart-notification';
   notification.textContent = message;
   document.body.appendChild(notification);
-  
+
   setTimeout(() => {
     notification.classList.add('fade-out');
     setTimeout(() => notification.remove(), 500);
@@ -72,17 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
           const headerOffset = 80;
           const elementPosition = targetElement.offsetTop;
           const offsetPosition = elementPosition - headerOffset;
-          
+
           window.scrollTo({
             top: offsetPosition,
             behavior: 'smooth'
           });
-          
+
           history.pushState(null, null, targetId);
         }
       }
@@ -93,11 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('.menu-section');
     const scrollPosition = window.scrollY + 100;
-    
+
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
-      
+
       if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
         const id = section.getAttribute('id');
         document.querySelectorAll('.menu-sidebar a').forEach(link => {
