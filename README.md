@@ -12,12 +12,12 @@ The project demonstrates responsive web design and front-end development skills.
 - Custom Styling – Styled entirely with global CSS for a cohesive aesthetic.
   
 # Technologies Used
-HTML5 
-CSS3 
-JavaScript 
+- HTML5 
+- CSS3 
+- JavaScript 
 
 # How to Run This Project
-Download or Clone the Repository.
-Open the Folder:Navigate to the project folder on your computer.
-Open in Browser:Double-click index.html or open it in your browser.
+- Download or Clone the Repository.
+- Open the Folder:Navigate to the project folder on your computer.
+- Open in Browser:Double-click index.html or open it in your browser.
 
