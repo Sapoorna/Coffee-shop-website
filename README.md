@@ -17,7 +17,7 @@ CSS3
 JavaScript 
 
 # How to Run This Project
-1. Download or Clone the Repository
-2.Open the Folder:Navigate to the project folder on your computer.
-3.Open in Browser:Double-click index.html or open it in your browser.
+Download or Clone the Repository.
+Open the Folder:Navigate to the project folder on your computer.
+Open in Browser:Double-click index.html or open it in your browser.
 
