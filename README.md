@@ -5,6 +5,9 @@ This is a simple **Coffee Shop website** created using **HTML, CSS, and JavaScri
 It was designed to showcase a modern café interface with a clean layout, menu display, and basic interactive features.  
 The project demonstrates responsive web design and front-end development skills.
 
+# Live at 
+https://coffee-shop-website-red.vercel.app/
+
 # Features
 - Responsive Design – Works on both desktop and mobile.
 - Menu Section – Displays coffee, desserts, and drinks.
